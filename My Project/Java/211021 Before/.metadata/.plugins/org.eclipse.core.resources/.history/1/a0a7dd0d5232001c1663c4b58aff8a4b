@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class CompareDigit {
+
+	public static void main(String[] args) {
+	    while (true) {   
+			System.out.print("2자리수 를 입력하세요(10~99)>>");
+	        Scanner sc = new Scanner(System.in);
+	        int a=sc.nextInt();
+	        
+	        int b,c;
+	        
+	        b = a%10; //일의자리
+	        c = a/10; //십의자리
+	        
+	        System.out.println("십의자리 " + c + "일의자리 " + "b");
+	        if (b==c) {
+	        	System.out.println("예 같단다");
+	        }
+	        else {
+	        	System.out.println("다르단다");
+	        
+	        
+	    }
+        /*
+        switch(a) {
+        case 99:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 88:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 77:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 66:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 55:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 44:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 33:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 22:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+        case 11:
+        	System.out.println("Yes! Same with 1's and 10's." );
+        	break;
+                	
+        default: 
+        	System.out.print("Not Same with 1's and 10's." );
+        */
+	        sc.close();
+	    }
+	    
+        	
+	}
+}

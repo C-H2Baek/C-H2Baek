@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class RockPaperScissors {
+
+	public static void main(String[] args) {
+        System.out.println("가위바위보 게임입니다. 가위, 바위, 보 중에서 입력하세요");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("철수 >> ");
+        String cs = sc.next();
+        System.out.print("영희 >> ");
+        String yh = sc.next();
+        
+        if(cs.equals("가위")&&yh.equals("보")) {
+        	System.out.println("철수가 이겼다");
+        }
+        else if(cs.equals("바위")&&yh.equals("가위")) {
+        	System.out.println("철수가 이겼다");
+        }
+        else if(cs.equals("보")&&yh.equals("바위")) {
+        	System.out.println("철수가 이겼다");
+        }
+        else if(cs.equals(yh)) {
+        	System.out.println("비겼다");
+        }
+        else {
+        	System.out.println("철수가 졌단다");
+        }
+        sc.close();
+		
+	}
+
+}
