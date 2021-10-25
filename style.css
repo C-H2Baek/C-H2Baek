@@ -21,14 +21,15 @@ h1 {
     object-fit: contain;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px;
-    grid-auto-flow: row dense;
-}
-.image1,.image2,.image3 {
-    display: grid;
-    row-gap: 10px;
-      
+@media (min-width: 720px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      grid-auto-flow: row dense;
+    }
+    .image,image2,image3 {
+      display: grid;
+      row-gap: 20px;
+    }
 }
