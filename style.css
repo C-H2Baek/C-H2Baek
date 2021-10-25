@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+h1 {
+    text-align: center;
+}
+.container {
+    width: 100%;
+    margin: auto;
+    
+}
+.images {
+    width: 100%;
+    height: auto;
+}
+.images img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    grid-auto-flow: row dense;
+}
+.image1,.image2,.image3 {
+    display: grid;
+    row-gap: 10px;
+    border 2px solid black;    
+}
+
+#img {
+    border 1px solid red;
+}
