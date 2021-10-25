@@ -19,21 +19,21 @@ h1 {
 }
 
   /* hover styles */
-.location-listing {
+.image-listing {
     position: relative;
 }
-.location-image {
+.image-image {
     line-height: 0;
     overflow: hidden;
 }
  
-.location-image img {
+.image-image img {
     filter: blur(0px);
     transition: filter 0.3s ease-in;
     transform: scale(1.1);
 }
   
-.location-title {
+.image-title {
     font-size: 1.5em;
     font-weight: bold;
     text-decoration: none;
@@ -54,20 +54,20 @@ h1 {
     justify-content: center;
 }
   
-.location-listing:hover .location-title {
+.image-listing:hover .image-title {
     opacity: 1;
 }
   
-.location-listing:hover .location-image img {
+.image-listing:hover .image-image img {
     filter: blur(2px);
 }
   
   /* for touch screen devices */
 @media (hover: none) { 
-    .location-title {
+    .image-title {
       opacity: 1;
 }
-    .location-image img {
+    .image-image img {
       filter: blur(2px);
   }
 }
