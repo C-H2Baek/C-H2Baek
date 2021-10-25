@@ -30,9 +30,5 @@ h1 {
 .image1,.image2,.image3 {
     display: grid;
     row-gap: 10px;
-    border 2px solid black;    
-}
-
-#img {
-    border 1px solid red;
+      
 }
