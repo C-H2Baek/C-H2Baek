@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -69,4 +70,78 @@ h1 {
       row-gap: 20px;
     }
 >>>>>>> 300791ec7202aa8d512b08e81a0347a5521ec05e
+=======
+body {
+    padding: 20px;
+    font-family: sans-serif;
+    background: #f2f2f2;
+}
+img {
+    width: 100%; /* need to overwrite inline dimensions */
+    height: auto;
+}
+h1 {
+    margin-bottom: .5em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));    grid-gap: 1em;
+}
+
+  /* hover styles */
+.image-listing {
+    position: relative;
+}
+.image-image {
+    line-height: 0;
+    overflow: hidden;
+}
+ 
+.image-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+}
+  
+.image-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90,0,10,0.4);
+    color: white;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.image-listing:hover .image-title {
+    opacity: 1;
+}
+  
+.image-listing:hover .image-image img {
+    filter: blur(2px);
+}
+  
+  /* for touch screen devices */
+@media (hover: none) { 
+    .image-title {
+      opacity: 1;
+}
+    .image-image img {
+      filter: blur(2px);
+  }
+>>>>>>> f4b8211d5f0071d04bc971d2868d4918ffe2b8fd
 }
