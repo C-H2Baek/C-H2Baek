@@ -1,76 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif;
-}
-h1 {
-    text-align: center;
-}
-.container {
-    width: 100%;
-    margin: auto;
-    
-}
-.images {
-    width: 100%;
-    height: auto;
-}
-.images img {
-    width: 100%;
-    height: 320px;
-    object-fit: contain;
-}
-
-@media (min-width: 720px) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-      grid-auto-flow: row dense;
-    }
-    .image,image2,image3 {
-      display: grid;
-      row-gap: 20px;
-    }
-=======
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif;
-}
-h1 {
-    text-align: center;
-}
-.container {
-    width: 100%;
-    margin: auto;
-    
-}
-.images {
-    width: 100%;
-    height: auto;
-}
-.images img {
-    width: 100%;
-    height: 320px;
-    object-fit: contain;
-}
-
-@media (min-width: 720px) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-      grid-auto-flow: row dense;
-    }
-    .image,image2,image3 {
-      display: grid;
-      row-gap: 20px;
-    }
->>>>>>> 300791ec7202aa8d512b08e81a0347a5521ec05e
-=======
 body {
     padding: 20px;
     font-family: sans-serif;
@@ -143,5 +70,4 @@ h1 {
     .image-image img {
       filter: blur(2px);
   }
->>>>>>> f4b8211d5f0071d04bc971d2868d4918ffe2b8fd
 }
