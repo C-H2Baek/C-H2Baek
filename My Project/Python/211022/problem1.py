@@ -1,30 +1,22 @@
-#리스트내의 특정값이 몇 번쨰인가 순차탐색을 통한 검색 값 찾기
-
-colors= [ 'red' , 'blue' , 'green']
-colors[0]
 
 
-# 학생 정보의 리스트 표현
+myList = input("Choose Number : split , )").split(',')
+#myList = [55,9,5,3,2,4,3,4,4,]
+count=0
 
-number_list= input("Choose Number :  (split,)"),split(',')
+#print(type(myList))
 
 while True:
-
-    print(number_list)
     
-    a=int(input("Search number In List : "))
-    b=0;
+    print(myList)
+    num = input("Search Number")
     
-    for i in range(0,6) :
-        
-        if a==list1[i]:
-            b=i+1
-            print("%dis %dLocation." %(a,b))
-
-
-# other
-
-
-
-
+    for i in range(len(myList)):
+        if myList[i] == num:
+            print("%s is %d Location." % (num,i+1))
+            break
+        count+=17
+    if count == len(myList):
+        print("nothing number in list.")
+    count = 0
 
