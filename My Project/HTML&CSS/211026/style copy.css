@@ -58,10 +58,10 @@ img {
     color: whitesmoke;
 }
 #main_gnb > ul > li:first-child > a {
-    border-radius: 10px 100px / 120px;
+    border-radius: 10px 0 0 10px;
 }
 #main_gnb > ul > li:last-child > a {
-    border-radius: 10px 100px / 120px;
+    border-radius: 0 10px 10px 0;
 }
 
 
@@ -77,10 +77,10 @@ img {
     color: whitesmoke;
 }
 #main_lnb > ul > li:first-child > a {
-    border-radius: 10px 100px / 120px;
+    border-radius: 10px 0 0 10px;
 }
 #main_lnb > ul > li:last-child > a {
-    border-radius: 10px 100px / 120px;
+    border-radius: 0 10px 10px 0;
 }
 
 #content {
