@@ -3,10 +3,10 @@ from tkinter import messagebox
 
 window=Tk()
 window.title("Window Practice")
-#window.geometry("800x800")
+window.geometry("660x640")
 
 #배경이미지 표시
-BackG = PhotoImage(file="Images/gif/jeju5.gif")
+BackG = PhotoImage(file="Images\gif\jeju8.gif")
 BackImage = Label(window,image=BackG)
 BackImage.place(x=-2, y=-2)
 
@@ -89,12 +89,12 @@ rb7=Radiobutton(window, text="Cat", variable=ani, value=2, command=VoteA)
 rb8=Radiobutton(window, text="Rabbit", variable=ani, value=3, command=VoteA)
 rb9=Button(window, text="Show Animal", command=VoteA)
 
-photos=PhotoImage(file="Images\gif\jeju3.gif")
+photos=PhotoImage(file="Images\gif\Lion.gif")
 photo1=PhotoImage(file="Images\gif\dog3.gif")
 photo2=PhotoImage(file="Images\gif\cat2.gif")
 photo3=PhotoImage(file="Images\gif\dog4.gif")
 
-VoteImage=Label(window, width=300, height=300 ,text="",  bg="white", image=photos)
+VoteImage=Label(window, width=300, height=300 , bg="white", image=photos)
 
 VoteText.pack(padx=5, pady=5)
 rb6.pack(padx=5, pady=5)
@@ -104,7 +104,7 @@ rb9.pack(padx=5, pady=5)
 VoteImage.pack(padx=5, pady=5)
 
 label = Label(window, text="어떤 동물을 좋아하니?")
-label.pack()
+label.pack(padx=5, pady=5)
 
 button1= Button(window,text="파이썬 종료",fg="red", command=quit)
 button1.pack()
