@@ -5,25 +5,25 @@ public class CompareDigit {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			System.out.print("2ÀÚ¸®¼ö ¸¦ ÀÔ·ÂÇÏ¼¼¿ä(10~99)>>");
+			System.out.print("2ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½(10~99)>>");
 	        
 	        int a=sc.nextInt();
 	        
 	        int b,c;
 	        
-	        b = a%10; //ÀÏÀÇÀÚ¸®
-	        c = a/10; //½ÊÀÇÀÚ¸®
+	        b = a%10; //ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½
+	        c = a/10; //ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½
 	        
-	        System.out.println("½ÊÀÇÀÚ¸® " + c + "ÀÏÀÇÀÚ¸® " + b);
+	        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ " + c + "ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ " + b);
 	        if (b==c) {
-	        	System.out.println("¿¹ °°´Ü´Ù");
+	        	System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½Ü´ï¿½");
 	        }
 	        else {
-	        	System.out.println("´Ù¸£´Ü´Ù");
+	        	System.out.println("ï¿½Ù¸ï¿½ï¿½Ü´ï¿½");
 	        }
-	        
+			sc.close();     
 	    }
-		sc.close(); 	
+			
 	}
 	
 }
