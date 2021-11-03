@@ -30,7 +30,6 @@ public class OpenChallenge {
 				}
 					
 			}
-		in.close();
 		}
-	
+		
 	}
