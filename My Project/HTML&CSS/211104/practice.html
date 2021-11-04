@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <!-- Include CSS -->
+    <link rel="stylesheet" href="style_practice.css">
+    
+    <!-- Contain Symbol Icon -->
+    <link rel="icon" href="data:image/png;base64,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">
+</head>
+
+<header>
+  <h1>Brand</h1>
+  <nav>
+    <span>Menu1</span>
+    <span>Menu2</span>
+    <span>Menu3</span>
+  </nav>
+</header>
+
+<body>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <body>
+      <!-- Parent Container -->
+      <div class="parent-page-listing">
+          <h1>My Gallerys</h1>
+          <!-- Grid Container -->
+          <div class="grid-container">
+            <!-- Image List Container -->
+            <article id="01" class="image-listing">
+              <!-- Image -->
+              <a class="image-title" href="#">Indigo Wolf</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/1.jpg" alt="1"></a>
+              </div>
+            </article>
+  
+            <article id="02" class="image-listing">
+              <a class="image-title" href="#">Sumber Beach</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/2.jpg" alt="2"></a>
+              </div>
+            </article>
+  
+            <article id="03" class="image-listing">
+              <a class="image-title" href="#">Valley Of Mountain</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/3.jpg" alt="3"></a>
+              </div>
+            </article>
+  
+            <article id="04" class="image-listing">
+              <a class="image-title" href="#">Beach of Sea</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/4.jpg" alt="4"></a>
+              </div>
+            </article>
+  
+            <article id="05" class="image-listing">
+              <a class="image-title" href="#">Night Sky</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/5.jpg" alt="5"></a>
+              </div>
+            </article>
+  
+            <article id="06" class="image-listing">
+              <a class="image-title" href="#">Universe</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/6.jpg" alt="6"></a>
+              </div>
+            </article>
+  
+            <article id="07" class="image-listing">
+              <a class="image-title" href="#">Cube Brick</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/7.jpg" alt="7"></a>
+              </div>
+            </article>
+  
+            <article id="08" class="image-listing">
+              <a class="image-title" href="#">Satellite View</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/8.jpg" alt="8"></a>
+              </div>
+            </article>
+  
+            <article id="09" class="image-listing">
+              <a class="image-title" href="#">Evening</a>
+              <div class="image-image">
+                <a href="#">
+                    <img width="300" height="180" src="../Images/9.jpg" alt="9"></a>
+              </div>
+            </article>
+         
+          </div>
+          <!-- Enf of Grid Container -->
+        
+        </div>
+</div>
+    
+</body>
+</html>
