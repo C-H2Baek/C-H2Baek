@@ -17,7 +17,7 @@ class Rectangle{
 		}
 		else return area;
 	}
-	void show() {
+	void show() { 
 		System.out.println("("+x1+","+y1+")"+","+"("+x2+","+y2+")");
 		System.out.println("≥–¿Ã:" + this.square());
 	}
