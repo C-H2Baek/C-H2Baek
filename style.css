@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     padding: 20px;
     /* font-family: impact; */
@@ -118,4 +119,126 @@ h1,h3,input {
     .image-image img {
       filter: blur(2px);
   }
+=======
+body {
+    padding: 20px;
+    /* font-family: impact; */
+    background: #f2f2f2;
+    margin-top: 50px;
+    
+}
+img {
+    width: 100%; 
+    height: auto;
+    scale: 1;
+}
+
+
+#nav{
+    background-color: whitesmoke ;
+    color: black;
+    font-size: 50px; 
+    width: 99.5%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 3;
+    text-overflow: 0;
+    border-width: thick;
+    border-style: inset;
+    border-radius: 30px;
+    box-shadow: inset 5em 1em rgb(195, 255, 237);
+}
+
+.icon{
+    font-family: impact;
+    color:black;
+    transform: rotate(0.5turn);
+    text-align: start;
+    writing-mode: vertical-rl;
+}
+
+.profile{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border-width: thick;
+    border-color: red rgba(170, 50, 220, .6) green;
+    
+}
+
+
+#search input::placeholder{
+    color: darkgoldenrod;
+    font-size: 15px;
+    
+}
+
+h1,h3,input {
+    margin-bottom: .0em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px 100px / 120px;
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    grid-gap: 1em;
+}
+
+  /* hover styles */
+.image-listing {
+    position: relative;
+}
+.image-image {
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 30px;
+    border-color: black;
+}
+ 
+.image-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+}
+  
+.image-title { 
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90,0,10,0.4);
+    color: white;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.image-listing:hover .image-title {
+    opacity: 1;
+}
+  
+.image-listing:hover .image-image img {
+    filter: blur(2px);
+}
+  
+  /* for touch screen devices */
+@media (hover: none) { 
+    .image-title {
+      opacity: 1;
+}
+    .image-image img {
+      filter: blur(2px);
+  }
+>>>>>>> 77b38fe0ecc4c1080b78ef5593c28b394172ff2d
 }
