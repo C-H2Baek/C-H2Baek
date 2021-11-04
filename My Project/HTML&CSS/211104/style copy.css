@@ -25,12 +25,12 @@ img {
     border-width: thick;
     border-style: inset;
     border-radius: 30px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    box-shadow: inset 5em 1em rgb(195, 255, 237);
 }
 
 .icon{
     font-family: impact;
-    color:brown;
+    color:black;
     transform: rotate(0.5turn);
     text-align: start;
     writing-mode: vertical-rl;
