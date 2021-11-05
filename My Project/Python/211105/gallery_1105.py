@@ -54,7 +54,7 @@ btnPrev=Button(window, image=button9, relief="flat", command = clickPrev)
 btnNext=Button(window, image=button3, relief="flat", command = clickNext)
 
 print(fnameList)
-TextFile=Label(window, text=fnameList[num], font="Castellar")
+TextFile=Label(window, text=fnameList[num], font="Castellar", bg="teal")
 
 photo=PhotoImage(file="Images/"+fnameList[0])
 
