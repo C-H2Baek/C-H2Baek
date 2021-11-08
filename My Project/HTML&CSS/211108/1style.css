@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+    margin: 3;
+    text-align: center;
+    border: 3px solid black;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: mediumaquamarine;
+}
+#header{
+    height: 100px;
+}
+#body{
+    flex-grow: 1;
+    display: flex;
+}
+#sidebar{
+    width: 30%;
+    flex-shrink: 0;
+    border: 3px solid black;
+}
+#contents{
+    flex-grow: 1;
+    border: 3px solid black;
+}
+#footer{
+    height: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+    #sidebar {
+        width: 20%;
+    }
+}
