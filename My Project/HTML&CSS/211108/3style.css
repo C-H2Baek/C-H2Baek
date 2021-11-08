@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+#photo-box {
+    width: 60%;
+    columns: 4;
+    margin : 50px auto;
+}
+.photo {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    background: tomato;
+    display: inline-block;
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
