@@ -11,7 +11,6 @@ img {
   scale: 1;
 }
 
-
 #nav{
   background-color: whitesmoke ;
   color: black;
@@ -42,14 +41,36 @@ img {
   border-radius: 50%;
   border-width: thick;
   border-color: red rgba(170, 50, 220, .6) green;
-  
 }
+
+#moral{
+  background: salmon;
+  
+  width: 300px;
+  position: fixed;  
+  z-index: 10;
+  top: 30%;
+  left: 25%;
+}
+
+#moral .header{
+  text-align: center;
+  background: forestgreen;
+}
+#moral .body{
+  text-align: center;
+}
+#moral .footer{
+  text-align: center;
+  background: blueviolet;
+
+}
+
 
 
 #search input::placeholder{
   color: darkgoldenrod;
   font-size: 15px;
-  
 }
 
 h1,h3,input {
