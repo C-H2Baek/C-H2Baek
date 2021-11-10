@@ -45,7 +45,7 @@ img {
 
 #moral{
   background: salmon;
-  
+  font-family: 'Dancing Script', cursive;
   width: 300px;
   position: fixed;  
   z-index: 10;
