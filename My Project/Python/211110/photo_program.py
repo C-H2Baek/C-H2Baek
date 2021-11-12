@@ -22,28 +22,33 @@ window, canvas, paper = None, None, None
 photo, photo2 = None, None              # photo 원본, photo2 사본
 oriX, oriY, newX, newY = 0 , 0 , 0 , 0         # 원본 이미지의 폭과 높이를 저장하는 함수
 
+
 # 함수 정의부, 각 메뉴를 선택할 때 실행 될 함수 선언
 # displayImage(이미지, 가로사이즈, 세로사이즈) : 이미지를 화면에 출력하는 함수
 def displayImage(img, width, height) :
     global window, canvas, paper, photo, photo2, oriX, oriY, newX, newY
-    window.geometry(str(width)+"x"+str(height))
+    #window.geometry(str(width)+"x"+str(height))
     if canvas !=None :
         canvas.destroy()
 
     # 새 캔버스 생성. 처리된 이미지의 가로 세로 사이즈대로 생성
     # 캔버스의 흰색 테두리 없애기 bd=0, highlightthickness=0
-    canvas=Canvas(window, width=width, height=height, bg='#626262' , bd=0 , highlightthickness=0)
+    #canvas=Canvas(window, width=width, height=height, bg='#626262' , bd=0 , highlightthickness=0)
+    canvas=Canvas(window, width=840, height=793, bg='#333333' , bd=0 , highlightthickness=0)
     # 새 캔버스에 붙일 종이(paper) 생성, 처리돤 이미지의 가로 세로 사이즈대로 생성
     paper=PhotoImage(width=width, height=height)
     # 새 캔버스에 종이(paper)를 붙임 (차후 그 종이 위에 처리된 이미지를 출력)
     # 생성될 페이퍼의 위치는 캔버스의 가로 세로 사이즈의 중간 위치
-    canvas.create_image( (width/2, height/2), image=paper, state="normal") 
+    canvas.create_image((width/2, height/2), image=paper, state="normal")
+    #canvas.place((width/2, height/2), image=paper, state="normal")
 
     # 새 캔버스와 새 종이 위에 처리된 이미지를 출력
     # maake_blob(format=None) 는 이미지를 바이너리 코드로 변환해 주는 함수, 배열의 형태로 저장
     # 흰 종이에 사진을 출력하기 위해 이미지 파일의 모든 점(픽셀)에 접근
     # 이미지의 픽셀 하나하나에 접근하여 rgb 값을 각각 배열의 형태로 저장 [blob[0]r,blob[0]g,blog[0]b,blod[1]r,blob[1]g,blob[1]b...
+    '''
     blob = img.make_blob(format = 'RGB')
+        
     for i in range(0, width) :
         for k in range(0, height) :
             r = blob[(i * 3 * width) + (k * 3) + 0]     # blob[0], blob[3], blob[6], blob[9]...의 값을 r에 저장
@@ -51,7 +56,9 @@ def displayImage(img, width, height) :
             b = blob[(i * 3 * width) + (k * 3) + 2]     # blob[2], blob[5], blob[8], blob[11]...의 값을 b에 저장
             # paper에 칼라로 점을 찍어줌, 세로로 높이만큼 찍고 가로를 너비만큼 반복
             paper.put("#%02x%02x%02x" % (r,g,b) , (k,i))
-    canvas.pack()            
+    '''
+    paper.put(photo2.make_blob(format="png"))
+    canvas.place(x=73, y=45)            
 
 def func_open() :
      # 전역 변수 선언
@@ -79,6 +86,16 @@ def func_save():
     saveFp = asksaveasfile(parent=window, mode="w", defaultextension=".jpg", filetypes=(("JPG File","*.jpg;*.jpeg"), ("All Files" , "*.*")))
     savePhoto = photo2.convert("jpg")
     savePhoto.save(filename=saveFp.name)
+
+#원본 이미지대로 되돌리는 함수
+def func_reset():
+    global window, canvas, paper, photo, photo2, oriX, oriY, newX, newY     # 전역 변수 선언
+    if photo2 == None :
+        return
+    photo2 = photo.clone()      # 원본 이미지의 photo를 복사하여 photo2에 저장
+    newX = photo2.width
+    newY = photo2.height
+    displayImage(photo2, newX, newY)        # 화면에 이미지를 출력하는 displayImage() 함수 호출 
 
 def func_exit() :
     window.quit()
@@ -143,8 +160,17 @@ def func_inverse():
     newY = photo2.height
     displayImage(photo2, newX, newY)
 
+# 이미지 처리2 > 밝게 / 어둡게
+# 대화창을 통해 정수를 입력받아 그 수만큼 이미지의 명도를 조정
+# Wand 라이브러리에서 제공하는 modulate(명도값, 채도값, 색상값)함수를 사용
+# 명도는 modulate(명도값, 100, 100)함수를 사용
+# 원본의 명도값이 100 이므로 100 이상은 '밝게', 100 이하는 '어둡게' 처리
+# 밝게, modulate(밝기값, 100, 100)함수에 100~200값 입력
+
 def func_lighter():
     global window,canvas, paper, photo, photo2, oriX, oriY
+    if photo2 == None :
+        return
     value = askinteger("Brightly", "Input the value (100~200)", minvalue=100, maxvalue=200)
     #photo2 = photo.clone()
     photo2.modulate(value, 100, 100)
@@ -154,6 +180,8 @@ def func_lighter():
 
 def func_darker():
     global window,canvas, paper, photo, photo2, oriX, oriY
+    if photo2 == None :
+        return
     value = askinteger("Darkly", "Input the value(0~100)", minvalue=0, maxvalue=100)
     #photo2 = photo.clone()
     photo2.modulate(value, 100, 100)
@@ -163,6 +191,8 @@ def func_darker():
 
 def func_sharpness():
     global window,canvas, paper, photo, photo2, oriX, oriY
+    if photo2 == None :
+        return
     value = askinteger("Sharply", "Input the value(100~200)", minvalue=100, maxvalue=200)
     #photo2 = photo.clone()
     photo2.modulate(100, value, 100)
@@ -172,6 +202,8 @@ def func_sharpness():
 
 def func_blur():
     global window,canvas, paper, photo, photo2, oriX, oriY
+    if photo2 == None :
+        return
     value = askinteger("Blurly", "input the value(0~100)", minvalue=0, maxvalue=100)
     #photo2 = photo.clone()
     photo2.modulate(100, value, 100)
@@ -179,9 +211,14 @@ def func_blur():
     newY = photo2.height
     displayImage(photo2, newX, newY)
 
+# 이미지 처리2 > 흑백 이미지
+# 이미지의 type 값을 "grayscale"로 설정
 def func_grayscale():
     global window,canvas, paper, photo, photo2, oriX, oriY
+    if photo2 == None :
+        return
     #photo2 = photo.clone()
+    #photo2.modulate(100, 0, 100)
     photo2.type="grayscale"
     newX = photo2.width 
     newY = photo2.height
@@ -189,8 +226,13 @@ def func_grayscale():
 
 # 메인 코드 부분
 window=Tk()
-window.geometry("250x250")
-window.title("미니 포토샵(ver 0.1)")
+window.geometry("1170x854")
+window.title("미니 포토샵(ver 0.2)" + str(photo))
+
+# 배경 백그라운드
+backimg = PhotoImage(file="Images/editor_background.png")
+labelImage = Label(window,image=backimg)
+labelImage.place(x=-2, y=-2)
 
 # 메뉴 생성
 # 1. 메뉴 자체 생성 및 화면에 디스플레이
@@ -219,7 +261,10 @@ mainMenu.add_cascade(label="Image Process2" , menu=imageMenu2)
 fileMenu.add_command(label="Open File", command=func_open)
 fileMenu.add_command(label="Save File", command=func_save)
 fileMenu.add_separator()
+fileMenu.add_command(label="Reset File", command=func_reset)
+fileMenu.add_separator()
 fileMenu.add_command(label="Exit", command=func_exit)
+
 
 imageMenu1.add_command(label="Expansion", command=func_zoomin)
 imageMenu1.add_command(label="Shrink", command=func_zoomout)

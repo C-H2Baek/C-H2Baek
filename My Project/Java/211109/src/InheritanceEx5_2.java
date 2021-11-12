@@ -3,11 +3,11 @@ class Person {
 	int age;
 	protected int height;
 	public String name;
-
+	
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	public int getWeight() {
+	public int hetWeight() {
 		return weight;
 	}
 }
@@ -22,9 +22,10 @@ class Student extends Person {
 	}
 }
 
-public class InheritanceEx {
+public class InheritanceEx5_2 {
 	public static void main(String[] args) {
 		Student s = new Student();
 		s.set();
+		System.out.println(s);
 	}
 }
