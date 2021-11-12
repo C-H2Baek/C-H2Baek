@@ -63,14 +63,18 @@ def displayImage(img, width, height) :
     paper.put(photo2.make_blob(format="png"))
     canvas.place(x=73, y=45)            
 
-def func_clean() :
-    pass
-'''
+def func_clear() :
+
     if photo2 == None :
         return
     canvas.destroy()
-'''   
+    mainMenu.entryconfigure("Image Process1", state=DISABLED)
+    mainMenu.entryconfigure("Image Process2", state=DISABLED)
 
+    fileMenu.entryconfigure("Clear File", state=DISABLED)
+    fileMenu.entryconfigure("Save File", state=DISABLED)
+    fileMenu.entryconfigure("Reset File", state=DISABLED)
+    
 def func_open() :
     # 전역 변수 선언
     global window, canvas, paper, photo, photo2, oriX, oriY, newX, newY
@@ -80,7 +84,7 @@ def func_open() :
     mainMenu.entryconfigure("Image Process1", state=ACTIVE)
     mainMenu.entryconfigure("Image Process2", state=ACTIVE)
 
-    fileMenu.entryconfigure("Clean File", state=ACTIVE)
+    fileMenu.entryconfigure("Clear File", state=ACTIVE)
     fileMenu.entryconfigure("Save File", state=ACTIVE)
     fileMenu.entryconfigure("Reset File", state=ACTIVE)
 
@@ -132,7 +136,7 @@ def func_zoomin():
     if photo2 == None :
         return
      # askinteger() 함수를 실행해 대화 상자로 확대할 배수 입력받음
-    scale = askinteger("Expansion", "Magnified multiples", minvalue=2, maxvalue=4)
+    scale = float(askinteger("Expansion", "Magnified multiples(2~9)", minvalue=2, maxvalue=9))
     #photo2 = photo.clone()
     photo2.resize( int(oriX * scale) , int(oriY * scale) )
     newX = photo2.width 
@@ -145,7 +149,7 @@ def func_zoomout():
     if photo2 == None :
         return
      # askinteger() 함수를 실행해 대화 상자로 축소할 배수 입력받음    
-    scale = askinteger("Shrink", "Shrink multiples", minvalue=2, maxvalue=4)
+    scale = float(askinteger("Shrink", "Shrink multiples(2~9)", minvalue=2, maxvalue=9))
     #photo2 = photo.clone()
     photo2.resize( int(oriX / scale) , int(oriY / scale) )
     newX = photo2.width 
@@ -178,7 +182,7 @@ def func_inverse():
     global window,canvas, paper, photo, photo2, oriX, oriY, newX, newY
     if photo2 == None :
         return
-    degree = askinteger("Rotate", "Input the angle to rotate", minvalue=0, maxvalue=360)
+    degree = askinteger("Rotate", "Input the angle to rotate (0~360)", minvalue=0, maxvalue=360)
     #photo2 = photo.clone()
     photo2.rotate(degree)
     newX = photo2.width 
@@ -231,7 +235,7 @@ def func_blur():
         return
     value = askinteger("Blur", "input the value(0~100)", minvalue=0, maxvalue=100)
     #photo2 = photo.clone()
-    photo2.modulate(100, value, 100)
+    photo2.filter()
     newX = photo2.width 
     newY = photo2.height
     displayImage(photo2, newX, newY)
@@ -309,7 +313,7 @@ TextFile.place(x=630, y=11)
 # 3. 하위 메뉴 생성
 # 상위메뉴이름.add_command(label="하위 메뉴 이름" , command=함수명)
 # add_command() 메소드는 하위 메뉴 항목 생성
-fileMenu.add_command(label="Clean File", command=func_clean , state=DISABLED)
+fileMenu.add_command(label="Clear File", command=func_clear , state=DISABLED)
 fileMenu.add_separator()
 fileMenu.add_command(label="Open File", command=func_open)
 fileMenu.add_command(label="Save File", command=func_save , state=DISABLED)
