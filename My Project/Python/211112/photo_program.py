@@ -64,10 +64,10 @@ def displayImage(img, width, height) :
     canvas.place(x=73, y=45)            
 
 def func_clear() :
-
     if photo2 == None :
         return
     canvas.destroy()
+      
     mainMenu.entryconfigure("Image Process1", state=DISABLED)
     mainMenu.entryconfigure("Image Process2", state=DISABLED)
 
