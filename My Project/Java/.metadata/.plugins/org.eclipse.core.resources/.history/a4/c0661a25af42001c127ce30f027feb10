@@ -1,0 +1,14 @@
+abstract class Calculator5_7 {
+	public abstract int add(int a, int b);
+	public abstract int subtract(int a, int b);
+	public abstract double average(int[] a);
+}
+
+public class GoodCalc extends Calculator5_7 {
+	@Override
+	public int add(int a, int b) { // 추상 메소드 구현
+		return a + b;
+	}
+	@Override
+	public int subtract(int a, int b) { // 추상 메소드 구현
+}
