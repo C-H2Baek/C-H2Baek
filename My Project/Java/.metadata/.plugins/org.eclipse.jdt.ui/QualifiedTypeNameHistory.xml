@@ -2,5 +2,22 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.awt.Point"/>
     <fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
+    <fullyQualifiedTypeName name="ColorTV"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="javax.xml.crypto.dsig.spec.C14NMethodParameterSpec"/>
+    <fullyQualifiedTypeName name="java.security.CryptoPrimitive"/>
+    <fullyQualifiedTypeName name="ColorPoint"/>
+    <fullyQualifiedTypeName name="javax.crypto.spec.OAEPParameterSpec"/>
+    <fullyQualifiedTypeName name="Point"/>
+    <fullyQualifiedTypeName name="PositivePoint"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.HTMLEditorKit.InsertHTMLTextAction"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="Calc"/>
+    <fullyQualifiedTypeName name="Add"/>
+    <fullyQualifiedTypeName name="Sub"/>
+    <fullyQualifiedTypeName name="Mul"/>
+    <fullyQualifiedTypeName name="Div"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.nio.channels.ScatteringByteChannel"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

@@ -1,8 +1,0 @@
-class Person2 { }
-class Student2 extends Person { }
-class Researcher extends Person { }
-class Professor extends Researcher { }
-
-public class InstanceOfEx5_4 {
-
-}
