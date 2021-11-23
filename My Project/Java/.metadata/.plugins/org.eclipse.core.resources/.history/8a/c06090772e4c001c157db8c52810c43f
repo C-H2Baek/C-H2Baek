@@ -18,7 +18,7 @@ public class MemberDeleteService {
 		if (index != -1) {
 			Member[] tempArray = MemberUI.memberArray;
 			MemberUI.memberArray = new Member [MemberUI.memberArray.length -1];
-			for (int i=0; i<tempArray.length; i++) {
+			for (int i=0; 1<tempArray.length; i++) {
 				if(i < index) {
 					MemberUI.memberArray[i] = tempArray[i];
 				}
