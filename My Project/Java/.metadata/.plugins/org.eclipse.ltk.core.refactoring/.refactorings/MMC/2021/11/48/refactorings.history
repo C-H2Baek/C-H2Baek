@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;vo&apos; to &apos;MMS/src&apos;&#x0D;&#x0A;- Original project: &apos;MMC&apos;&#x0D;&#x0A;- Destination element: &apos;MMS/src&apos;&#x0D;&#x0A;- Original element: &apos;MMC/src/vo&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=MMS/src" element1="/src&lt;vo" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1637631193459" version="1.0"/>
+</session>

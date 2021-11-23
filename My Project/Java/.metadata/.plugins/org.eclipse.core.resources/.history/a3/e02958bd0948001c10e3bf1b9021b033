@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+interface Stack {
+	int length(); 
+	int compacity(); 
+	String pop(); 
+	boolean push(String val); 
+}
+
+class StringStack implements Stack {
+	private String stk;
+	private int tos;
+	public StringStack(int cap) {
+		stk = new String[cap];
+		tos = -1
+	}
+	
+	
+	
+	@Override
+	public int length() {
+		
+	}
+}
+
+
+public class Solve5_9 {
+
+}

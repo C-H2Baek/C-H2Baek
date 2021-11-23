@@ -1,0 +1,16 @@
+
+import java.util.Scanner;
+
+interface Stack {
+	int length(); 
+	int compacity(); 
+	String pop(); 
+	boolean push(String val); 
+}
+
+
+
+
+public class Solve5_9 {
+
+}

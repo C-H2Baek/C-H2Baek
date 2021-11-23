@@ -1,0 +1,51 @@
+
+abstract class Solve5_12{
+	private Solve5_12 next;
+	public Solve5_12() {
+		next = null;
+	}
+	public void setNext(Solve5_12 obj) {
+		next = obj;
+	}
+	public Solve5_12 getNext() {
+		return next;
+	}
+	public abstract void draw();
+}
+
+
+class Line extends Solve5_12 {
+	@Override
+	public void draw() {
+		System.out.println("Line");
+	}
+}
+
+class Rect extends Solve5_12{
+	@Override
+	public void draw() {
+		System.out.println("Circle");
+	}
+}
+class Circle extends Solve5_12{
+	@Override
+	public void draw() {
+		System.out.println("Circle");
+	}
+}
+
+class GraphicEditor {
+	private String name;
+	private Solve5_12 start=null, last=null;
+	
+	public GraphicEditor(String name) {
+		this.name = name;
+	}	
+
+
+	public static void main(String[] args) {
+	GraphicEditor ge = new GraphicEditor("beauty");
+	ge.run();
+	}
+}
+

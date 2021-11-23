@@ -1,0 +1,25 @@
+class TV {
+	private int size;
+	public TV(int size) {this.size = size;}
+	protected int getSize() { return size; }
+}
+
+class ColorTv extends TV {
+	private int color;
+	public ColorTV(int size, int color) {
+		super(size);
+		this.color = color ;
+	}
+	protected int getColor() { return color; }
+	public void printProperty() {
+		System.out.println
+	}
+}
+
+public class Solve5_1{
+
+	public static void main(String [] args) {
+		ColorTv Solve5_1 = new Color TV(32, 1024);
+		TV.printProperty();
+	}
+}

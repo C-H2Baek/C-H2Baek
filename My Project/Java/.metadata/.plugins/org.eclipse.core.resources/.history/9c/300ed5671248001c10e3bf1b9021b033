@@ -1,0 +1,28 @@
+
+abstract class Solve5_12{
+	private Shape next;
+	public Shape() {
+		next = null;
+	}
+	public void setNext(Shape obj) {
+		next = obj;
+	}
+	public Shape getNext() {
+		return next;
+	}
+	public abstract void draw();
+}
+
+
+public class Line extends Solve5_12 {
+	@Override
+	public void draw() {
+		System.out.println("Line");
+	}
+}
+
+public class Rect extends Solve5_12{
+	@Override
+	public void draw()
+		System.out.println("Circle");
+}
