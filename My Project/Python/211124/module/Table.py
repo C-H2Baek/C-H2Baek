@@ -9,7 +9,8 @@ class Table :
         self.canvas=Canvas(window,width=self.width,height=self.height)
         self.canvas.create_image(self.width/2,self.height/2,image=img)
         self.canvas.pack()
-        self.canvas.create_line(self.width/2, 0, self.width/2, self.height, width=2, dash=(15, 23), fill="white")
+        self.canvas.create_line(self.width/2, 0, self.width/2, self.height, width=5, dash=(15, 23), fill="white")
+        
 
         # 득점판 추가:
         font = ("Algerian" , 72)

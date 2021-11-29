@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="java.security.CryptoPrimitive"/>
     <fullyQualifiedTypeName name="ColorPoint"/>
     <fullyQualifiedTypeName name="javax.crypto.spec.OAEPParameterSpec"/>
-    <fullyQualifiedTypeName name="Point"/>
     <fullyQualifiedTypeName name="PositivePoint"/>
     <fullyQualifiedTypeName name="javax.swing.text.html.HTMLEditorKit.InsertHTMLTextAction"/>
     <fullyQualifiedTypeName name="Calc"/>
@@ -34,11 +33,13 @@
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="ui.MemberUI"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.UnknownFormatConversionException"/>
     <fullyQualifiedTypeName name="vo.SearchData"/>
     <fullyQualifiedTypeName name="vo.Member"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="util.ConsoleUtil"/>
     <fullyQualifiedTypeName name="svc.MemberListService"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="Point"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

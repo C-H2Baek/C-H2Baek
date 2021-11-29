@@ -78,7 +78,7 @@ def restart_game(master):
     my_table.move_item(bat_L.rectangle, 0, 150, 25 ,250)
     my_table.move_item(bat_R.rectangle, 575, 150, 600, 250)
     label1.destroy()
-
+   
     my_ball.start_ball(x_speed=random.randrange(20,30), y_speed=random.randrange(20,30))
     if(score_left == "WIN" or score_left == "LOSE"):
         score_left = 0
@@ -88,6 +88,7 @@ def restart_game(master):
 
 backimg = PhotoImage(file="Images/background.png")
 my_table = Table(window, 600, 400, backimg)
+
 label1=Label(window, text="PRESS THE 'SPACE KEY'\n TO START" , font=("Showcard Gothic",30))
 label1.place(x=80, y=50)
 
