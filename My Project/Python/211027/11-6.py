@@ -1,3 +1,4 @@
+
 # Define Class
 class Car:
     color=""
