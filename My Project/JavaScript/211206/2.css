@@ -1,0 +1,20 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#box-container{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 100px auto;
+	background-color: antiquewhite;
+}
+#box{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 100px;
+	background-color: aliceblue;
+	transition: all 1s;
+}

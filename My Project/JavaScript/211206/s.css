@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#box-container{
+    width: 100%;
+    height: 100vh;
+    background-color: lightsalmon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightpink;
+    transition: all 0.5s;
+    margin-left: 20px;
+    user-select: none;
+}

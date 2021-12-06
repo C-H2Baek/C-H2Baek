@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#photo-container{
+    width: 500px;
+    height: 250px;
+    margin: 100px auto;
+    border: 0px solid red;
+	overflow: hidden;
+}
+#photos{
+    width: 2500px;
+    height: 100%;
+    border: 0px solid blue;
+
+	display: flex;
+	transition: all 1s;
+
+    /* margin-left: -500px; */
+}
+.photo{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.photo img{
+	width: 100%;
+	height: 100%;
+}
+
+/* 커로셀 셀렉터 */
+#selection{
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 0px solid red;
+}
+.options{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-left: 10px;
+	background-color: lightcoral;
+}
+.options:hover{
+	background-color: lightcoral;
+	cursor: pointer;
+}

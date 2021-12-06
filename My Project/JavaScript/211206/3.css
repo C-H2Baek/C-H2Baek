@@ -1,0 +1,38 @@
+body{
+    margin: 10;
+    padding: 0;
+}
+#menu-container{
+	width: 500px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.menu{
+	width: 100%;
+	flex: 1;
+	border: 1px solid peru;
+	margin-bottom: 10px;
+	cursor: pointer;
+	user-select: none;
+	
+}
+.title{
+	background-color: lightgray;
+	padding: 10px;
+	text-align: center;
+}
+.info{
+    padding: 10px;
+    background: lightgoldenrodyellow;
+    color: goldenrod;
+    font-weight: bold;
+    display: none;
+    transition: all 0.5s;
+}
+.open{
+    display: block;
+}
