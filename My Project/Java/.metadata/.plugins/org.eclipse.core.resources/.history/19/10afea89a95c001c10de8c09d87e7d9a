@@ -1,0 +1,13 @@
+import java.io.*;
+
+import javax.management.BadAttributeValueExpException;
+
+public class FileInputStreamEx {
+	public static void main(String[] args) {
+		byte b[] = new byte [6]; // 비어 있는 byte 배열
+		try {
+			// "c:\\Temp\\test.out" 파일을 읽어 배열 b에 저장
+		}
+	}
+
+}

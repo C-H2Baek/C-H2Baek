@@ -1,0 +1,15 @@
+import java.util.Vector;
+
+public class VectorEx {
+	public static void main(String[] args) {
+		Vector<Integer> v = new Vector<Integer>(); // 정수 값만 다루는 벡터 생성
+		v.add(5); // 5 삽입
+		v.add(4); // 4 삽입
+		v.add(-1); // -1 삽입
+		
+		// 벡터 중간에 삽입하기
+		v.add(2, 100); // 4와 -1 사이에 정수 100 삽입
+		
+		
+	}
+}
