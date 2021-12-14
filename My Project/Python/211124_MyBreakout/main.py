@@ -21,7 +21,7 @@ my_ball = ball.Ball(table = my_table, x_speed=x_velocity, y_speed=y_velocity,
 bat_B = bat.Bat(table = my_table, width=100, height=10,
                 x_posn=250, y_posn=370, colour="blue")
 
-# Bat 클래스로부터 배트를 주문하지만 이것은 벽돌을 호출하는 것은 아닙니다.
+# Bat 클래스로부터 배트를 주문하지만 이것은 벽돌을 호출하는 것은 아닙니다
 bricks = []
 b=1
 while b < 7:
