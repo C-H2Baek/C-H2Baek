@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #0e1111;
+}
+
+.color-box{
+    background-color: #0e1111;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+#color-input{
+    all: unset;
+    width: 300px;
+    height: 50px;
+    border: 2px solid lightgreen;
+    padding: 10px;
+    border-radius: 15px;
+    color: lightgreen;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#color-input::placeholder{
+    color: lightgreen;
+}
