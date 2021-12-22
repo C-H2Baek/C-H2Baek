@@ -2,7 +2,7 @@ const colorBox = document.querySelector('.color-box')
 const colorList = document.querySelector('.color-list')
 const colorInput = document.getElementById('color-input')
 
-const colors = ['orange', 'blue', 'brown', 'green', 'red', 'skyblue', 'white' , 'black']
+const colors = ['#FFFFFF' , 'orange', 'blue', 'brown', 'green', 'red', 'skyblue', 'white' , 'black']
 
 function addColors(colors){
     for(let color of colors){

@@ -24,22 +24,22 @@ img {
     width:960px; margin:0 auto;
 
     /*절대 좌표*/
-    height:60px;
+    height:160px;
     position: relative;
 }
 
 #main_header > #title{
-    position: fixed;
+    position: absolute;
     left: 20px; top: 30px;
 }
 
 #main_header > #main_gnb{
-    position: fixed;
+    position: absolute;
     right:0; top:0;
 }
 
 #main_header > #main_lnb{
-    position: fixed;
+    position: absolute;
     right:0; bottom:10px;
 }
 #title{

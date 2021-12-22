@@ -7,6 +7,10 @@ let cnt = 0
 let timerID = null
 let prevOption = 0 // 이전에 늘어났던 동그라미의 인덱스 값
 
+
+
+
+
 function changePosition(){
     const photoItems = document.querySelectorAll('.photo')
     console.log(photoItems)
