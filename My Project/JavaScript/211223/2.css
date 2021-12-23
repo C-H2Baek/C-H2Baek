@@ -1,0 +1,22 @@
+#box{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    /* 처음 캐릭터 안보임*/
+    top: -100px;
+    transition: all .5s ease-out;
+    background-image: url('../../../Images/character_right.png');
+    background-size: cover;
+    /* 커서 깜빡임 제거*/
+    caret-color: transparent;
+}
+/* 그라운드 스타일 */
+#bar{
+    width: 700px;
+    height: 50px;
+    background-color: peru;
+    position: absolute;
+    left: 0;
+    top: 550px;
+}

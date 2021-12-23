@@ -1,0 +1,45 @@
+body{
+    height: 200vh;
+}
+#section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
+.contents{
+    background-color: cadetblue;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: all .5s ease;
+    font-weight: bold;
+    font-size:20px;
+    color: antiquewhite;
+}
+#section{
+    line-height: 200px;
+}
+.up{
+    /* y 좌표를 아래쪽으로 100px 만큼 내린다 */
+    transform: translate(0, 150px); 
+}
+.down{
+    /* y 좌표를 아래쪽으로 100px 만큼 올린다 */
+    transform: translate(0, -150px);
+} 
+.left{
+    /* y 좌표를 아래쪽으로 100px 만큼 올린다 */
+    transform: translate(-150px, 0);
+} 
+.right{
+    /* y 좌표를 아래쪽으로 100px 만큼 올린다 */
+    transform: translate(150px, 0);
+} 
+.show{
+    opacity: 1;
+    transform: none;
+}
