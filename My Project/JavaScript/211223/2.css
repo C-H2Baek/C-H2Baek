@@ -6,7 +6,7 @@
     /* 처음 캐릭터 안보임*/
     top: -100px;
     transition: all .5s ease-out;
-    background-image: url('../../../Images/character_right.png');
+    background-image: url('super-mario-right.jpg');
     background-size: cover;
     /* 커서 깜빡임 제거*/
     caret-color: transparent;

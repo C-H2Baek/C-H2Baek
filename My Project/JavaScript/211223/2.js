@@ -22,6 +22,11 @@ function down(){
         top = limitBottom // 지면 안착
         isJumping = true // 점프 가능여부
     }
+    // 종료 조건
+    if(isDead && top >= limitBottom + 700){
+        alert("Game Over")
+        clearInterval(timerId)
+    }
 
     // 실제 화면에서 캐릭터의 y방향 위치가 업데이트
     box.style.top = `${top.toString()}px`
@@ -35,14 +40,14 @@ function move(e){
     let left = parseInt(leftstyle)
     let top = parseInt(topStyle)
 
-    if(isDead === true && 700 >= limitBottom){
-        alert('문구 게임 종료')
-        gravity = 0
-        return
-    }
+    // if(isDead === true && 700 >= limitBottom){
+    //     alert('문구 게임 종료')
+    //     gravity = 0
+    //     return
+    // }
 
     if(e.keyCode === 39){
-        box.style.backgroundImage = "url('../../../Images/character_right.png')"
+        box.style.backgroundImage = "url('super-mario-right.jpg')"
         left += vx // 등속 운동
         if(left > limitLeft){
             isDead = true
@@ -50,7 +55,7 @@ function move(e){
         }
         //화살표 좌측
     }else if(e.keyCode === 37){
-        box.style.backgroundImage = "url('../../../Images/character_left.png')"
+        box.style.backgroundImage = "url('super-mario-left.jpg')"
         if(left > 0){
             left -= vx
         }
