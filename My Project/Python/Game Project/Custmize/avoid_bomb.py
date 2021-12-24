@@ -11,6 +11,8 @@ small_font = pygame.font.SysFont('Bauhaus 93', 36)
 score = 0
 game_over = False
 
+background = pygame.image.load('Images/back3.png')
+
 bomb_image = pygame.image.load('assets/avoid_bomb/bomb.png') # 방해물 이미지 정의
 #bomb = bomb_image.get_rect(left=100, top=100)
 bombs = []  #빈 리스트 정의
@@ -29,6 +31,7 @@ girl = girl_image.get_rect(centerx=300, bottom=800)    # 게임 객체 Rect 크�
 
 while True: # running thig code
     screen.fill((0, 0, 0)) # 색상코드 0, 0, 0 으로 화면을 채움
+    screen.blit(background, (0,0)) # 배경 이미지 입히기
 
     event = pygame.event.poll() # 게임의 이벤트를 처리한다
     if event.type == pygame.QUIT:
