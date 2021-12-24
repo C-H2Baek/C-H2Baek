@@ -31,7 +31,7 @@ readFp = None
 # 함수 정의부, 각 메뉴를 선택할 때 실행 될 함수 선언
 # displayImage(이미지, 가로사이즈, 세로사이즈) : 이미지를 화면에 출력하는 함수
 def displayImage(img, width, height) :
-    global window, canvas, canvas2, paper, photo, photo2, oriX, oriY, newX, newY
+    global window, canvas, canvas2, canvas3, paper, photo, photo2, oriX, oriY, newX, newY
     #window.geometry(str(width)+"x"+str(height))
     if canvas !=None :
         canvas.destroy()
@@ -41,6 +41,7 @@ def displayImage(img, width, height) :
     #canvas=Canvas(window, width=width, height=height, bg='#626262' , bd=0 , highlightthickness=0)
     canvas=Canvas(window, width=840, height=793, bg='#333333' , bd=0 , highlightthickness=0)
     canvas2=Canvas(window, width=118, height=118, bg='#333333' , bd=0 , highlightthickness=0)
+    canvas3=Canvas(window, width=32, height=32, bd=0 , highlightthickness=0)
     # 새 캔버스에 붙일 종이(paper) 생성, 처리돤 이미지의 가로 세로 사이즈대로 생성
     paper=PhotoImage(width=width, height=height)
     #paper2=PhotoImage(width=width, height=height)
@@ -49,6 +50,7 @@ def displayImage(img, width, height) :
     # 생성될 페이퍼의 위치는 캔버스의 가로 세로 사이즈의 중간 위치
     canvas.create_image((840/2, 793/2), image=paper, state="normal")
     canvas2.create_image((118/2, 118/2), image=paper, state="normal")
+    canvas3.create_image((218/2, 218/2), image=paper, state="normal")
     #canvas.place((width/2, height/2), image=paper, state="normal")
 
     # 새 캔버스와 새 종이 위에 처리된 이미지를 출력
@@ -70,13 +72,15 @@ def displayImage(img, width, height) :
     paper.put(photo2.make_blob(format="png"))
     #paper2.put(photo2.make_blob(format="png"))
     canvas.place(x=73, y=45)            
-    canvas2.place(x=951, y=87)            
+    canvas2.place(x=951, y=87)
+    canvas3.place(x=950, y=294)                
 
 def func_clear() :
     if photo2 == None :
         return
     canvas.destroy()
     canvas2.destroy()
+    canvas3.destroy()
 
     TextFile=Label(window, text="Cleared\t\t\t\t" , font=BOLD ,fg='white' , bg='#292c31')
     TextFile.place(x=630, y=11)
@@ -430,11 +434,11 @@ imageMenu2.add_command(label="Gray Scale", command=func_grayscale, state=DISABLE
 btnClear=Button(window, relief="flat", command=func_clear, font=BOLD , bg='#292c31', fg='white' , text ="🏠" )
 #btnClear.attributes('-alpha', 0.3)
 btnClear.place(width=25, height=25, x=10, y=10)
-btnClear.place(width=67, height=600, x=3, y=55)
+#btnClear.place(width=67, height=600, x=3, y=55)
 btnzoomin=Button(window, relief="flat", command=func_btn_zoom_in())
 btnzoomout=Button(window, relief="flat", command=func_btn_zoom_out())
-btnzoomin.place(width=25, height=25, x=1000, y=250)
-btnzoomout.place(width=25, height=25, x=900, y=250)
+#btnzoomin.place(width=25, height=25, x=1000, y=250)
+#btnzoomout.place(width=25, height=25, x=900, y=250)
 
 
 
