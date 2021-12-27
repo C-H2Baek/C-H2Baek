@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Github\Main\My Project\Java"/>
 			<item value="D:\Baek.C.H\Github\Main\My Project\Java\myMMS\src2"/>
 			<item value="D:\Baek.C.H\Github\Main\My Project\Java\myMMS\model"/>
 			<item value="D:\Baek.C.H\Github\Main\My Project\Java\myMMS\src"/>
