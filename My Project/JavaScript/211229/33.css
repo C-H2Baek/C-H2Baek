@@ -1,0 +1,38 @@
+#root{
+    width: 60%;
+    margin: 100px auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.product{
+    flex: 200px;
+    height: 500px;
+    box-shadow: 1px 1px 5px 5px peru;
+    color: white;
+    background: peru;
+    margin: 10px;
+    overflow: hidden;
+}
+.product-img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+}
+.product-name{
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.product-description{
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 15px;
+}
