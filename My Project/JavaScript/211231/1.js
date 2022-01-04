@@ -189,7 +189,7 @@ fetch(API_URL)
         // 조건에 맞는 상품을 검색하는 코드 구현하기
         products.forEach(product => {
             if (product.product_type === 'lipstick' && parseFloat(product.rating) >= 4 && parseFloat(product.rating) <= 5) {
-               // console.log(product)
+               //console.log(product)
         }
     })
 })
@@ -228,8 +228,8 @@ var citylength = Object.keys(friends);
 console.log("결과 개수:" + citylength.length);
 
 // 10. 
-
-
+friends.some(friend => friend.age > 40)
+friends.every(friend => friend.age > 40)
 
 
 
@@ -251,7 +251,16 @@ const users = [
     {name: 'dannel', age: 19, city: 'seoul', email: 'dannel@gmail.com'},
 ]
 
+let filteredUsers = null
 
+function ageIsValid(user){
+    return user.age > 0 && parseInt(user.age) === user.age
+}
+function emailIsValid(user){
+    return user.email.indexOf('@') > -1 && user.email.includes('.com')
+}
+filteredUsers = users.filter(ageIsValid)
+filteredUsers = filteredUsers.filter(emailIsValid)
 
 
 
