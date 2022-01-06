@@ -5,7 +5,7 @@ public class Sorry {
 		// TODO Auto-generated method stub
 		
 		System.out.println("Sorry~~");
-		System.out.println("Àç¹Õ¾î¼­ ¹Ì¾ÈÇÕ´Ï´Ù~~");
+		System.out.println("ï¿½ï¿½Õ¾î¼­ ï¿½Ì¾ï¿½ï¿½Õ´nanana~~");
 
 	}
 
