@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#root{
+    width: 60%;
+    margin: 100px auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 32px;
+}
+#search{
+    all: unset;
+    width: 80%;
+    height: 30px;
+    border: 2px solid greenyellow;
+    border-radius: 15px;
+    padding: 10px;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#search::placeholder{
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#lyrics{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.highlight{
+    background: greenyellow;
+    display: inline-block;
+}

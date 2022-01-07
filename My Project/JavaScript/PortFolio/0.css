@@ -29,9 +29,9 @@ body{
 }
 
 .calendar table.month th.month-title{
-    color: #5a8990;
+    color: #000000;
     font-size: 1.9em;
-    font-weight: 200;
+    font-weight: 2000;
     font-family: 'Dancing Script' , cursive; 
  
 }

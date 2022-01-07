@@ -1,0 +1,27 @@
+const friends = [
+    {name: 'victoria', age: 13, city: 'seoul'},
+    {name: 'sun', age: 34, city: 'busan'},
+    {name: 'johseb', age: 25, city: 'busan'},
+    {name: 'syleemomo', age: 9, city: 'seoul'},
+    {name: 'hannah', age: 41, city: 'daegu'},
+    {name: 'shara', age: 37, city: 'seoul'},
+    {name: 'martin', age: 28, city: 'daegu'},
+    {name: 'gorgia', age: 39, city: 'seoul'},
+    {name: 'nana', age: 24, city: 'busan'},
+    {name: 'dannel', age: 19, city: 'seoul'},
+]
+
+
+const seoulFriends = friends
+.sort( (f1, f2) => {
+    if(f1.city > f2.city) return 1
+    if(f1.city < f2.city) return -1
+
+    if(f1.age > f2.age) return 1
+    if(f1.age < f2.age) return -1
+
+    else return 0
+})
+.slice(friends.findIndex(friend => friend.city.indexOf('seoul') > -1))
+
+console.log(seoulFriends)

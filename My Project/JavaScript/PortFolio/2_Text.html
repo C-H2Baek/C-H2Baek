@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
     <!-- Include CSS -->
-    <link rel="stylesheet" href="2_Index.css">
+    <link rel="stylesheet" href="2_Text.css">
 </head>
 
 <header>
@@ -39,13 +39,14 @@
   <script type="text/javascript">
     var i=0;
     var txt="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nisi suscipit cum, "
-                        
+     
     var speed=15;
     function type(){
       document.getElementById("type").innerHTML
         +=txt.charAt(i);
       i++;
       setTimeout(type,speed);
+      
     }
     type(); 
   </script>
