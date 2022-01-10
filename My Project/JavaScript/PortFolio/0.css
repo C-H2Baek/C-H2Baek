@@ -37,16 +37,20 @@ body{
 }
 table.month td:first-child,
 table.month td:last-child,
-table.month thead tr:nth-child(2) th:first-child,
+table.month thead tr:nth-child(2) th:first-child{
+    color: #091bc2;
+}
 table.month thead tr:nth-child(2) th:last-child{
     color: #f75c90;
 }
+
+
 .calendar table.month td.day .day-content{
     padding: 6px 8px;
 }
 .calendar table.month th.day-header{
     color: #777;
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 700;
 }
 table.month td.day .day-content:hover{
