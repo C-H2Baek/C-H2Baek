@@ -19,7 +19,7 @@ from tkinter.simpledialog import *
 # 설치한 이미지 처리 기능을 제공하는 이미지매직의 라이브러리 임포트
 # GIF 뿐 아니라 JPG, PNG 같은 이미지를 모두 처리하기 위해 외부 라이브러리 이미지 매직 사용
 from wand.image import *
-
+# 마우스 및 키보드를 제어하는 라이브러리
 import pyautogui
 
 # 모든 함수들이 공통적으로 사용할 전역 변수 선언부 
@@ -155,8 +155,8 @@ def func_open() :
     currentmouseX, currentmouseY = pyautogui.position()
     print("Current Mouse Pointer Location" , currentmouseX, currentmouseY)
 
-    Xpoint=Label(window, text=currentmouseX, font=BOLD ,fg='white' , bg='#292c31')
-    Xpoint.place(x=1125, y=90)
+    Xpoint=Label(window, text=currentmouseX, font=BOLD ,fg='white' , bg='#f92c31')
+    Xpoint.place(x=125, y=90)
     Ypoint=Label(window, text=currentmouseY, font=BOLD ,fg='white' , bg='#292c31')
     Ypoint.place(x=1125, y=110)
 
@@ -348,8 +348,6 @@ def func_grayscale():
     global window,canvas, paper, photo, photo2, oriX, oriY
     if photo2 == None :
         return
-    #photo2 = photo.clone()
-    #photo2.modulate(100, 0, 100)
     photo2.type="grayscale"
     newX = photo2.width 
     newY = photo2.height
