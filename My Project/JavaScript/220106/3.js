@@ -227,8 +227,9 @@ alphabetFrequency.forEach(obj => console.log(obj.alphabet, ':', obj.cnt))
 const lyricsEl = document.getElementById('lyrics')
 const searchEl = document.getElementById('search')
 
+
 function displayLyrics(str){
-    lyricsEl.innerHTML = str
+    //lyricsEl.innerHTML = str
 }
 
 function highLightKeyword(e){

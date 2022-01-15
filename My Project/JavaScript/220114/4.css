@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#graph{
+    width: 720px;
+    height: 200px;
+    margin: 200px auto;
+    border: 1px solid red;
+    background: black;
+    position: relative;
+}
+.dot{
+    width: 5px; /* 그래프 선의 굵기 설정 */
+    height: 5px;
+    border-radius: 50%;
+    background: greenyellow;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#sign{
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background: black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cell{
+    width: 10px; 
+    height: 10px;
+    background: blue;
+}
+.bright{
+    background: red;
+}
