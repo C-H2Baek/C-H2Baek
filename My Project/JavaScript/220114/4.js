@@ -43,37 +43,53 @@ console.log(fruitsT)
 console.log("\t\tSolve 5\n\n")
 
 const graph = document.getElementById('graph')
-const points = []
-const dx = 1 // degree
+
+let points = [] // 포인트 배열
 let x = 0 // degree
-let y = 0
-let radx = 0 // radian
-// 다음 (X,Y) 포인트 값 계산
-function getNextPoint(){
-    radx = x * (Math.PI / 180)
-    y = Math.sin(radx)
-    points.push([x, y])
-    x += dx
-    // console.log(points)
+let offset = 0 // 추출 시작점
+
+function degreeToRad(x){
+    return x * (Math.PI / 180)
 }
-// (X,Y) 포인트 값으로부터 DOM 객체 생성 및 화면에 표시
+function calSinVal(x){
+    return Math.sin(x)
+}
+function clearWindow(el){
+    el.innerHTML = ''
+}
+function getPoint(x){
+    return [x, calSinVal(degreeToRad(x))]
+}
+function isArrayFull(len){
+    return len > 360
+}
+
 function displayPoint(point){
+    const [x, y] = point
+    const xScale = 2, yScale = 100, yShift = 100
+
     const pointEl = document.createElement('div')
     pointEl.className = 'dot'
-    pointEl.style.left = `${point[0] * 2}px` // x-scale: 2배
-    pointEl.style.top = `${point[1]* 100 * -1 + 100}px` // y-scale : 100배 (반전 + 좌표이동)
+    pointEl.style.left = `${(x - offset) * xScale}px` // x-scale: 2배 (offset 만큼 좌표이동)
+    pointEl.style.top = `${(y* yScale) * -1 + yShift}px` // y-scale : 100배 (반전 + 좌표이동)
     graph.appendChild(pointEl)
 }
+
 function redraw(){
+    clearWindow(graph)
     
+    points.push(getPoint(x)) // 포인트 추가
+    x++ // x 좌표 변경
+
+    if(isArrayFull(points.length)){
+        points.shift() // 첫번째 요소를 제거함으로써 360개 유지
+        offset++ //  offset 증가
+    }
+    points.forEach(displayPoint) // 화면에 그래프 그리기
+  
 }
-// (X,Y) 포인트 값을 요소로 가지는 2차원 배열 생성
-for(let i=0; i<360; i++){
-    getNextPoint()
-}
-console.log(points)
-setInterval(redraw,1000)
-points.forEach(displayPoint)
+
+setInterval(redraw, 1000)
 
 
 
@@ -149,3 +165,28 @@ const sign5 = [
 const signs = [sign1, sign2, sign3, sign4, sign5]
 let index = 0
 
+function displayCell(value){
+    const cellEl = document.createElement('div')
+    cellEl.className = value === 0 ? 'cell' : 'cell bright'
+    signDiv.appendChild(cellEl)
+}
+
+function displaySign(sign){
+    const rows = sign.length
+    const columns = sign[0].length
+
+    for(let i=0; i<rows; i++){
+        for(let j=0; j<columns; j++){
+            displayCell(sign[i][j])
+        }
+    }
+}
+
+function redraw2(){
+    const sign = signs[index % signs.length]
+    signDiv.innerHTML = '' // 화면 초기화
+    displaySign(sign)
+    index++
+}
+
+setInterval(redraw2, 10000)
