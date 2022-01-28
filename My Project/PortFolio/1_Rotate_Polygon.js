@@ -41,7 +41,7 @@ export class Polygon{
     //도형 or 점일때
     // this.rotate -= moveX * 0.008;
     //사각형에 색칠할때
-    this.rotate -= moveX * 0.008;
+    this.rotate -= moveX * 11.008;
     ctx.rotate(this.rotate);
     
     for(let i = 0; i < this.sides; i++){
