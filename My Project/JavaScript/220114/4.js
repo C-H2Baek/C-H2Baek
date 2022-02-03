@@ -89,7 +89,7 @@ function redraw(){
   
 }
 
-setInterval(redraw, 1000)
+setInterval(redraw, 10)
 
 
 
@@ -189,4 +189,4 @@ function redraw2(){
     index++
 }
 
-setInterval(redraw2, 10000)
+setInterval(redraw2, 1000)
