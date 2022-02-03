@@ -26,7 +26,7 @@ function pickRandomNumber(min, max){
 
 
 
-Satisfaction.getInfo()
+//Satisfaction.getInfo()
 
 
 /// 2번
@@ -50,3 +50,40 @@ const Δλ = (lon2 - lon1) * Math.PI / 180;
 const a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2); 
 const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
 const d = R * c; // meter // d = 11052555.850341197
+
+
+
+
+
+
+
+// 3
+
+const hairColors = ['black', 'brown', 'yellow', 'white', 'gold']
+const hairTypes = ['curly', 'straight', 'wavy', 'coily']
+const glasses = [true, false]
+const heights = [150, 160, 170, 180, 190, 200]
+const weights = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
+
+const person = []
+
+const cPick = Math.floor(Math.random() * hairColors.length);
+const cValue = hairColors[cPick]
+const tPick = Math.floor(Math.random() * hairTypes.length);
+const tValue = hairTypes[tPick]
+const gPick = Math.floor(Math.random() * glasses.length);
+const gValue = glasses[gPick]
+const hPick = Math.floor(Math.random() * heights.length);
+const hValue = heights[hPick]
+const wPick = Math.floor(Math.random() * weights.length);
+const wValue = weights[wPick]
+
+while(hairColors.length > 0) {
+    var inColors = hairColors.splice(Math.floor(Math.random() * hairColors.length),1)[0]
+    person.push(inColors)
+}
+
+console.log(person)
+console.log(`Hair Color: ${cValue}\nHair Types: ${tValue}\nWear Glasses: ${gValue}\nWeights: ${wValue}\nHeights: ${hValue}`)
+
+
