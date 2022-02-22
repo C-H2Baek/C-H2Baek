@@ -1,0 +1,5 @@
+https://data.daegu.go.kr/open/main.do
+- category에서 FILE 선택 -> cctv 입력 후 enter -> 2페이지 -> 대구광역시_CCTV_20200318 -> csv 다운로드
+
+https://kosis.kr/index/index.do
+국내통계 -> 기관별통계 -> 지방자치단체 -> 대구광역시 -> 대구광역시 -> 주민등록 인구통계 -> 동.읍.면/연령별 주민등록인구(내국인)
