@@ -13,12 +13,12 @@ body::before {
     content: "";
     position: absolute; z-index: 1;
     top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .login-form {position: relative; z-index: 2;}
 .login-form h1{
-    font-size: 32px; color: #fff;
+    font-size: 32px; color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 60px
 }
@@ -32,7 +32,7 @@ body::before {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #999;
-    font-size: 18px; color: #fff;
+    font-size: 18px; color: rgb(0, 0, 0);
     outline: none;
 }
 .int-area label {
@@ -47,10 +47,10 @@ body::before {
     animation-iteration-count: 3;
 }
 @keyframes warning {
-    0% {transform: translateX(-8px);}
-    25% {transform: translateX(8px);}
-    50% {transform: translateX(-8px);}
-    75% {transform: translateX(8px);}
+    0% {transform: translateX(-2px);}
+    25% {transform: translateX(2px);}
+    50% {transform: translateX(-2px);}
+    75% {transform: translateX(2px);}
 }
 
 .int-area input:focus + label,
