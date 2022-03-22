@@ -1,0 +1,230 @@
+.cover {
+    background-size: cover !important;
+}
+
+.bt {
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.b--black-10 {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.dt {
+    display: table;
+}
+
+.dtc {
+    display: table-cell;
+}
+
+.fl {
+    float: left;
+    _display: inline;
+}
+
+.serif {
+    font-family: georgia, times, serif;
+}
+
+.helvetica {
+    font-family: 'helvetica neue', helvetica, sans-serif;
+}
+
+.fw6 {
+    font-weight: 600;
+}
+
+.fw9 {
+    font-weight: 900;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+.lh-title {
+    line-height: 1.25;
+}
+
+.lh-copy {
+    line-height: 1.5;
+}
+
+.mw6 {
+    max-width: 32rem;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.black {
+    color: #000;
+}
+
+.bg-light-pink {
+    background-color: #ffa3d7;
+}
+
+.pl2 {
+    padding-left: .5rem;
+}
+
+.pr1 {
+    padding-right: .25rem;
+}
+
+.pb3 {
+    padding-bottom: 1rem;
+}
+
+.pb5 {
+    padding-bottom: 4rem;
+}
+
+.pv4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ph3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.f2 {
+    font-size: 2.25rem;
+}
+
+.f4 {
+    font-size: 1.25rem;
+}
+
+.f5 {
+    font-size: 1rem;
+}
+
+.f6 {
+    font-size: .875rem;
+}
+
+.measure {
+    max-width: 30em;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.v-mid {
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 30em) {
+    .fw4-ns {
+        font-weight: 400;
+    }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+    .ph4-m {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .f3-m {
+        font-size: 1.5rem;
+    }
+
+    .f5-m {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .dt-l {
+        display: table;
+    }
+
+    .dtc-l {
+        display: table-cell;
+    }
+
+    .w-50-l {
+        width: 50%;
+    }
+
+    .pl0-l {
+        padding-left: 0;
+    }
+
+    .pl2-l {
+        padding-left: .5rem;
+    }
+
+    .pr0-l {
+        padding-right: 0;
+    }
+
+    .pr2-l {
+        padding-right: .5rem;
+    }
+
+    .pr3-l {
+        padding-right: 1rem;
+    }
+
+    .pv4-l {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .ph5-l {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .f-subheadline-l {
+        font-size: 5rem;
+    }
+
+    .f1-l {
+        font-size: 3rem;
+    }
+
+    .f4-l {
+        font-size: 1.25rem;
+    }
+
+    .measure-l {
+        max-width: 30em;
+    }
+}
